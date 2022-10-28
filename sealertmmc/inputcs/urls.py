@@ -13,6 +13,5 @@ urlpatterns = [
     path('list/', views.sheet_list, name="sheet-list"),
     path('filter/', bootstrapfilter, name='bootstrap')
 ]
-if settings.DEBUG:
-        urlpatterns += static(settings.MEDIA_URL,
+urlpatterns += static(settings.MEDIA_URL,
                               document_root=settings.MEDIA_ROOT)
