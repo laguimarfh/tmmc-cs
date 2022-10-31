@@ -76,7 +76,7 @@ class Sheet(models.Model):
     period = models.CharField(max_length=30, null=False, choices=[('1st', '1st'), ('2nd','2nd'), ('3rd','3rd'), ('4th','4th')])
     coorx = models.FloatField(null=False, blank=False, default=None)
     coory = models.FloatField(null=False, blank=False, default=None)
-    photo = models.ImageField(upload_to = 'images', blank=True, null=True,)
+    photo = models.ImageField(blank=True, null=True,)
     
     def get_absolute_url(self):
         return reverse('defect-detail', kwargs={"pk": self.pk})
